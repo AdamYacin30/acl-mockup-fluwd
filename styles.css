@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Custom Styles */
 body {
     background-color: #f8fbff;
@@ -241,3 +242,178 @@ body {
 
 
 
+=======
+/* Custom Styles */
+body {
+    background-color: #f8fbff;
+  }
+  
+  #sidebar {
+    background-color: #f0f4f8;
+    height: 100vh;
+    padding: 20px 0;
+    border-right: 1px solid #e0e4e8;
+  }
+  
+  .user-info img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+  
+  .nav-link {
+    color: #555;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .welcome-section h4 {
+    color: #333;
+  }
+  
+  .action-card {
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    color: #555;
+  }
+  
+  .search-bar input {
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .avatar-section img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #e0e4e8; /* Optional: Add a border for better appearance */
+  }
+  #sidebar {
+    background-color: #f8fbff;
+    height: 100vh;
+    padding: 15px 0;
+    border-right: 1px solid #e0e4e8;
+  }
+  
+  .profile-section {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+  
+  .profile-section img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  
+  .avatar-section img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #e0e4e8; /* Optional border */
+  }
+  
+  .nav-link {
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .location {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .section-divider {
+    border: 0;
+    border-top: 1px solid #dcdcdc; /* Faint grey color */
+    margin: 10px 0;
+  }
+
+  .welcome-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 15px; /* Add margin to bring it in from the edges */
+  }
+  
+  .greeting {
+    font-size: 2.5rem;
+    font-weight: 700; /* Thicker and bolder */
+    color: #333;
+  }
+  
+  .lead {
+    font-size: 1.5rem; /* Increase font size for better visibility */
+    font-weight: 600; /* Make it bolder */
+    color: #555;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .action-card {
+    border: none;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
+    min-height: 200px;
+    transition: transform 0.2s;
+    margin: 0 15px; /* Add margin for spacing */
+  }
+  
+  .action-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .action-card .card-title {
+    font-weight: bold;
+  }
+  
+  .search-bar input {
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-box-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px; /* Add padding to ensure space from the edges */
+  }
+  
+  .chat-box {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 25px;
+  }
+  
+  .chat-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+  }
+  
+  .chat-box i {
+    font-size: 1.75rem;
+    cursor: pointer;
+  }
+  
+>>>>>>> 28bc979 (first attempt for home page dashbaord)
