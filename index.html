@@ -11,79 +11,92 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid">
-  <div class="row">
-    <!-- Sidebar -->
-    <nav id="sidebar" class="col-md-2 col-lg-2 d-md-block bg-light sidebar">
-        <div class="d-flex flex-column py-3">
-          <!-- Main Profile Header -->
-          <div class="profile-section d-flex align-items-center px-3 mb-3">
-            <img src="https://via.placeholder.com/40" alt="User Image" class="rounded-circle me-2">
-            <div>
-              <p class="mb-0 fw-bold">Fluwd</p>
-              <small>Your AI Project Manager</small>
-            </div>
-          </div>
-      
-          <!-- Divider Line -->
-          <hr class="section-divider">
-      
-          <!-- Profile Avatar and Location -->
-          <div class="text-center mb-3">
-            <img src="https://via.placeholder.com/80" alt="Profile Avatar" class="rounded-circle mb-2">
-            <p class="location mb-0">Ottawa, ON</p>
-          </div>
-      
-          <!-- Divider Line -->
-          <hr class="section-divider">
-      
-          <!-- Sidebar Navigation -->
-          <ul class="nav flex-column px-2">
-            <li class="nav-item my-2">
-                <a class="nav-link d-flex align-items-center" href="dashboard.html">
-                  <i class="bi bi-house-door me-2"></i> <span class="fw-bold">Dashboard</span>
-                </a>
-              </li>
-              
-            <li class="nav-item my-2">
-              <a class="nav-link d-flex align-items-center" href="portfolio.html">
-                <i class="bi bi-bar-chart me-2"></i> <span class="fw-bold">Portfolio</span>
-              </a>
-            </li>
-            <li class="nav-item my-2">
-              <a class="nav-link d-flex align-items-center" href="program.html">
-                <i class="bi bi-folder me-2"></i> <span class="fw-bold">Program</span>
-              </a>
-            </li>
-            <li class="nav-item my-2">
-              <a class="nav-link d-flex align-items-center" href="projects.html">
-                <i class="bi bi-list-check me-2"></i> <span class="fw-bold">Projects</span>
-              </a>
-            </li>
-            <li class="nav-item my-2">
-              <a class="nav-link d-flex align-items-center" href="boards.html">
-                <i class="bi bi-chat-left-dots me-2"></i> <span class="fw-bold">Boards</span>
-              </a>
-            </li>
-            <li class="nav-item my-2">
-              <a class="nav-link d-flex align-items-center" href="boards.html">
-                <i class="bi bi-inbox me-2"></i> <span class="fw-bold">Inbox</span>
-              </a>
-            </li>
-            <li class="nav-item my-2">
-              <a class="nav-link d-flex align-items-center" href="analytics.html">
-                <i class="bi bi-graph-up me-2"></i> <span class="fw-bold">Analytics</span>
-              </a>
-            </li>
-            <li class="nav-item my-2">
-              <a class="nav-link d-flex align-items-center" href="analytics.html">
-                <i class="bi bi-gear me-2"></i> <span class="fw-bold">Settings</span>
-              </a>
-            </li>
-          </ul>
+  <div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-2 col-lg-2 d-md-block bg-light sidebar">
+            <div class="d-flex flex-column py-3">
+                <!-- Main Profile Header -->
+      <div class="profile-section d-flex align-items-center px-3 mb-3">
+        <div class="gradient-circle-profile me-2"></div> <!-- Replace the image with the gradient circle -->
+        <div>
+          <p class="mb-0 fw-bold">Fluwd</p>
+          <small>Your AI Project Manager</small>
         </div>
-      </nav>
-      
+      </div>
+  
+            
+                <!-- Divider Line -->
+                <hr class="section-divider">
+            
+                <!-- Profile Avatar and Location -->
+                <div class="text-center mt-2">
+                  <div class="profile-section d-flex align-items-center px-3 mb-3 position-relative">
+                      <div class="profile-container me-2 position-relative">
+                          <div class="gradient-circle-profile"></div> <!-- Original gradient profile picture -->
+                          <div class="activity-status"></div>
+                      </div>
+                      <div>
+                          <p class="mb-0 fw-bold">Designluch</p>
+                          <small>Ottawa, ON</small>
+                      </div>
+                      <!-- Up and Down Icons for Avatar Change -->
+                      <div class="ms-auto">
+                          <i class="bi bi-chevron-up d-block"></i>
+                          <i class="bi bi-chevron-down d-block"></i>
+                      </div>
+                  </div>
+              </div>
+                
+            
+                <!-- Divider Line -->
+                <hr class="section-divider">
+            
+                <!-- Sidebar Navigation -->
+                <ul class="nav flex-column px-2">
+                    <li class="nav-item my-2">
+                        <a class="nav-link d-flex align-items-center" href="dashboard.html">
+                            <i class="bi bi-house-door me-2"></i> <span class="fw-bold">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item my-2">
+                        <a class="nav-link d-flex align-items-center" href="portfolio.html">
+                            <i class="bi bi-bar-chart me-2"></i> <span class="fw-bold">Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item my-2">
+                        <a class="nav-link d-flex align-items-center" href="program.html">
+                            <i class="bi bi-folder me-2"></i> <span class="fw-bold">Program</span>
+                        </a>
+                    </li>
+                    <li class="nav-item my-2">
+                        <a class="nav-link d-flex align-items-center" href="projects.html">
+                            <i class="bi bi-list-check me-2"></i> <span class="fw-bold">Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item my-2">
+                        <a class="nav-link d-flex align-items-center" href="boards.html">
+                            <i class="bi bi-chat-left-dots me-2"></i> <span class="fw-bold">Boards</span>
+                        </a>
+                    </li>
+                    <li class="nav-item my-2">
+                        <a class="nav-link d-flex align-items-center" href="inbox.html">
+                            <i class="bi bi-inbox me-2"></i> <span class="fw-bold">Inbox</span>
+                        </a>
+                    </li>
+                    <li class="nav-item my-2">
+                        <a class="nav-link d-flex align-items-center" href="analytics.html">
+                            <i class="bi bi-graph-up me-2"></i> <span class="fw-bold">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item my-2">
+                        <a class="nav-link d-flex align-items-center" href="settings.html">
+                            <i class="bi bi-gear me-2"></i> <span class="fw-bold">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
       
 
     <!-- Main Content Area -->
@@ -97,7 +110,7 @@
         <div class="d-flex align-items-center">
           <i class="bi bi-bell me-3" style="font-size: 1.5rem; cursor: pointer;"></i>
           <div class="d-flex align-items-center">
-            <img src="https://via.placeholder.com/40" alt="Profile Image" class="rounded-circle me-2">
+              <img src="pfpuser.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
             <div>
               <p class="mb-0 fw-bold" style="font-size: 0.9rem;">Ruben Vetrov</p>
               <small>PMO</small>
@@ -107,49 +120,147 @@
       </div>
     
       <!-- Welcome Section -->
-      <div class="welcome-container mb-5" style="margin-left: 15px; margin-right: 15px;">
-        <div class="welcome-section text-center p-4 shadow-sm">
-          <div class="gradient-circle"></div>
-          <h1 class="greeting mb-3">
-              <span class="gradient-text">Hello, Alexander</span>
-          </h1>
-          <p class="lead mb-0">How can I help you today?</p>
-        </div>
-      </div>
-    
-     <!-- Wrapper for content -->
-<div class="container-section">
-  <!-- Action Cards Section -->
-  <div class="d-flex justify-content-between mb-5 gap-4">
-    <div class="card action-card text-center">
-      <div class="card-body">
-        <i class="bi bi-kanban display-4 mb-2"></i>
-        <h5 class="card-title mt-3">Project Management</h5>
-        <p class="card-text">Manage a new project</p>
-      </div>
-    </div>
-    <div class="card action-card text-center">
-      <div class="card-body">
-        <i class="bi bi-file-earmark-text display-4 mb-2"></i>
-        <h5 class="card-title mt-3">Documentation</h5>
-        <p class="card-text">Create a project document</p>
-      </div>
-    </div>
-    <div class="card action-card text-center">
-      <div class="card-body">
-        <i class="bi bi-exclamation-triangle display-4 mb-2"></i>
-        <h5 class="card-title mt-3">Risk & Issue Management</h5>
-        <p class="card-text">Provide recommendations to mitigate a critical risk</p>
-      </div>
+<div id="welcomeContainer" class="welcome-container mb-5" style="margin-left: 15px; margin-right: 15px;">
+  <div class="welcome-section text-center p-4 shadow-sm">
+    <div class="gradient-circle"></div>
+    <h1 class="greeting mb-3">
+      <span class="gradient-text">Hello, Alexander</span>
+    </h1>
+    <p class="lead mb-0">How can I help you today?</p>
+  </div>
+</div>
+
+<!-- Action Cards Section -->
+<div id="actionCardsContainer" class="d-flex justify-content-between mb-5 gap-4">
+  <div class="card action-card text-center">
+    <div class="card-body">
+      <i class="bi bi-kanban display-4 mb-2"></i>
+      <h5 class="card-title mt-3">Project Management</h5>
+      <p class="card-text">Manage a new project</p>
     </div>
   </div>
-
-  <!-- Chat Box Section -->
-  <div class="chat-box-container text-center mt-5">
-    <div class="chat-box d-flex align-items-center p-3 mx-auto">
-      <i class="bi bi-chat-left-dots me-3 text-muted"></i>
-      <input type="text" class="form-control border-0" placeholder="What should I do to help resolve the issue of delayed project schedule?">
-      <i class="bi bi-send ms-3 text-muted"></i>
+  <div class="card action-card text-center">
+    <div class="card-body">
+      <i class="bi bi-file-earmark-text display-4 mb-2"></i>
+      <h5 class="card-title mt-3">Documentation</h5>
+      <p class="card-text">Create a project document</p>
+    </div>
+  </div>
+  <div class="card action-card text-center">
+    <div class="card-body">
+      <i class="bi bi-exclamation-triangle display-4 mb-2"></i>
+      <h5 class="card-title mt-3">Risk & Issue Management</h5>
+      <p class="card-text">Provide recommendations to mitigate a critical risk</p>
     </div>
   </div>
 </div>
+
+
+
+<!-- Chat History Section -->
+<div id="chatHistory" class="chat-history-container mt-4 aligned-container" style="margin-left: 15px; margin-right: 15px;">
+</div>
+
+<!-- Chat Box Section -->
+<div id="welcomeContainer" class="welcome-container mb-5" style="margin-left: 15px; margin-right: 15px;">
+  <div class="chat-box d-flex align-items-center">
+    <i class="bi bi-chat-left-dots me-3 text-muted"></i>
+    <input type="text" id="chatInput" class="form-control border-0" placeholder="What should I do to help resolve the issue of delayed project schedule?">
+    <button id="sendBtn" class="btn btn-link text-muted ms-3"><i class="bi bi-send"></i></button>
+  </div>
+</div>
+
+
+<script>
+document.getElementById('sendBtn').addEventListener('click', function() {
+  const chatInput = document.getElementById('chatInput');
+  const chatHistory = document.getElementById('chatHistory');
+  const userMessage = chatInput.value.trim();
+  const welcomeContainer = document.getElementById('welcomeContainer');
+  const actionCardsContainer = document.getElementById('actionCardsContainer');
+
+  if (userMessage !== '') {
+    // Hide elements with a class for better consistency
+    welcomeContainer.classList.add('hidden');
+    actionCardsContainer.classList.add('hidden');
+
+    // Append user message with profile image to chat history
+    const userMessageContainer = document.createElement('div');
+    userMessageContainer.classList.add('d-flex', 'align-items-start', 'mb-3', 'fade-up');
+
+    const userImage = document.createElement('img');
+    userImage.src = 'pfpuser.png'; // Replace with the path to the user's profile image
+    userImage.alt = 'User';
+    userImage.classList.add('rounded-circle', 'me-2');
+    userImage.style.width = '40px'; // Adjust size as needed
+    userImage.style.marginTop = "0.5rem";
+
+    const userMessageDiv = document.createElement('div');
+    userMessageDiv.classList.add('alert', 'alert-primary', 'text-start', 'flex-grow-1');
+    userMessageDiv.innerHTML = `<strong>You:</strong> ${userMessage}`;
+
+    userMessageContainer.appendChild(userImage);
+    userMessageContainer.appendChild(userMessageDiv);
+    chatHistory.appendChild(userMessageContainer);
+
+    // Scroll to the bottom of chat history immediately
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+
+    // Clear chat input
+    chatInput.value = '';
+
+    // Wait 1 second before showing the chatbot response
+    setTimeout(() => {
+      // Mock response from the chatbot with profile image
+      const responseMessageContainer = document.createElement('div');
+      responseMessageContainer.classList.add('d-flex', 'align-items-start', 'mb-3', 'fade-up');
+
+      const botImage = document.createElement('img');
+      botImage.src = 'pfpbot.png'; // Replace with the path to the chatbot's profile image
+      botImage.alt = 'Fluwd';
+      botImage.classList.add('rounded-circle', 'me-2');
+      botImage.style.width = '40px'; // Adjust size as needed
+      botImage.style.marginTop = "0.5rem";
+
+      const responseMessageDiv = document.createElement('div');
+      responseMessageDiv.classList.add('alert', 'alert-secondary', 'text-start', 'flex-grow-1');
+      responseMessageDiv.innerHTML = `
+        <strong>Fluwd:</strong>
+        <p>To resolve issues of a delayed project schedule, consider implementing the following strategies:</p>
+        <p><strong>Strategies to Resolve Delayed Project Schedules</strong></p>
+        <ol>
+          <li>
+            <strong>Conduct a Root Cause Analysis</strong><br>
+            Identify the reasons behind the delays. Common causes can include scope creep, resource shortages, technical challenges, or inadequate planning.
+          </li>
+          <p></p>
+          <li>
+            <strong>Re-Evaluate and Adjust the Project Plan</strong><br>
+            <ul>
+              <li>Break Down Tasks: Ensure tasks are broken down into smaller, manageable units.</li>
+              <li>Prioritise Tasks: Focus on critical path activities that directly impact the project deadline.</li>
+              <li>Update Schedule: Adjust timelines based on current progress and realistic estimates.</li>
+            </ul>
+          </li>
+          <p></p>
+          <li>
+            <strong>Improve Communication</strong><br>
+            <ul>
+              <li>Regular Updates: Hold frequent status meetings to track progress and identify issues early.</li>
+              <li>Clear Channels: Ensure there are clear communication channels among team members, stakeholders, and management.</li>
+            </ul>
+          </li>
+        </ol>
+      `;
+
+      responseMessageContainer.appendChild(botImage);
+      responseMessageContainer.appendChild(responseMessageDiv);
+      chatHistory.appendChild(responseMessageContainer);
+
+      // Scroll to the bottom of chat history after response appears
+      chatHistory.scrollTop = chatHistory.scrollHeight;
+    }, 1000); // 1000 milliseconds = 1 second
+  }
+});
+
+</script>

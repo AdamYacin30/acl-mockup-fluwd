@@ -82,6 +82,7 @@ body {
   font-size: 1rem;
 }
 
+
 .nav-link:hover {
   color: #007bff;
 }
@@ -92,7 +93,7 @@ body {
 }
 .section-divider {
   border: 0;
-  border-top: 1px solid #dcdcdc; /* Faint grey color */
+  border-top: 2.5px solid #b0b0b0; /* Darker grey color */
   margin: 10px 0;
 }
 
@@ -100,7 +101,6 @@ body {
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   margin: 0 15px; /* Add margin to bring it in from the edges */
 }
 
@@ -237,6 +237,14 @@ border-radius: 50%; /* Makes it a circle */
 margin: 0 auto 15px; /* Centers it and adds bottom margin */
 }
 
+.gradient-circle-profile {
+  width: 40px; /* Set size to 40x40 */
+  height: 40px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb, #ffb347); /* Diagonal gradient */
+  border-radius: 50%; /* Makes it a circle */
+}
+
+
 .card {
   border: none; /* Remove borders */
   border-radius: 15px; /* Rounded corners */
@@ -266,3 +274,111 @@ margin: 0 auto 15px; /* Centers it and adds bottom margin */
 .project-details .badge {
   font-size: 0.9rem;
 }
+
+#actionCardsContainer {
+  display: flex;
+  transition: opacity 0.5s;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.aligned-container {
+  max-width: 900px; /* Adjust this value to match the width of your welcome container */
+  margin: auto;
+  width: 100%; /* Full width within the allowed max-width */
+}
+
+.chat-box-container {
+  max-width: 900px; /* Match this value with the welcome container */
+  margin: 0 auto; /* Center align */
+  padding: 0; /* Remove any padding */
+}
+
+.chat-box {
+  width: 100%; /* Extend the chat box to fill the container */
+  background-color: #ffffff;
+  border-radius: 15px; /* Match the styling of the welcome container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 25px; /* Add inner padding for better content spacing */
+}
+
+/* Ensure chat history matches the same width as the chat box and header */
+/* Ensure chat history matches the same width as the chat box and header */
+.chat-history-container {
+  max-width: 100%; /* Extend to match the full width of the content */
+  margin-left: 15px; /* Align with the header section and chat box */
+  margin-right: 15px; /* Align with the header section and chat box */
+  width: auto; /* Let it naturally fill the container width */
+  padding: 0; /* Remove any internal padding */
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px); /* Start with the element moved down */
+  animation: fadeUp 0.5s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move the element up to its original position */
+  }
+}
+
+.profile-section-container {
+  margin-top: 20px; /* Adjust to desired spacing */
+  margin-bottom: 10px; /* Adjust to desired spacing */
+}
+
+/* Outer gray border */
+.outer-gray-border {
+  width: 46px; /* Slightly larger to add the gray border around the inner circle */
+  height: 46px;
+  border-radius: 50%;
+  background-color: #dcdcdc; /* Gray color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner gradient circle (profile picture) */
+.gradient-circle-profile {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb, #ffb347); /* Gradient background */
+  border-radius: 50%; /* Makes it a circle */
+  position: relative; /* Position for the status indicator */
+}
+
+/* Green online status indicator */
+.activity-status {
+  width: 10px;
+  height: 10px;
+  background-color: #28a745; /* Green color */
+  border-radius: 50%; /* Makes it a circle */
+  border: 2px solid #ffffff; /* White border to create separation */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.profile-section .bi {
+  font-size: 0.8rem; /* Smaller size */
+  color: #007bff; /* Bootstrap blue */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+  font-weight: bold; /* Adds thickness */
+  text-shadow: 0px 0px 1px #007bff; /* Slight shadow to give a thicker appearance */
+}
+
+/* Sidebar icon styles */
+#sidebar .nav-link i {
+  color: #007bff; /* Bootstrap blue */
+  font-size: 1.2rem; /* Increase icon size */
+  font-weight: bold; /* Make the icon thicker */
+  text-shadow: 0px 0px 1px #007bff; /* Add subtle shadow for thickness */
+}
+
+
