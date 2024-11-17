@@ -8,6 +8,7 @@ body {
   height: 100vh;
   padding: 20px 0;
   border-right: 1px solid #e0e4e8;
+  position: fixed;
 }
 
 .user-info img {
@@ -18,6 +19,7 @@ body {
 
 .nav-link {
   color: #555;
+  font-weight: bold;
   font-size: 1.2rem;
   transition: color 0.3s;
 }
@@ -199,7 +201,6 @@ width: 100%; /* Extend the chat box to fill the container */
 background-color: #ffffff;
 border-radius: 20px;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-padding: 15px 25px; /* Padding for inner content */
 }
 
 .container-section {
@@ -302,7 +303,7 @@ margin: 0 auto 15px; /* Centers it and adds bottom margin */
   background-color: #ffffff;
   border-radius: 15px; /* Match the styling of the welcome container */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px 25px; /* Add inner padding for better content spacing */
+  padding: 30px 45px; /* Add inner padding for better content spacing */
 }
 
 /* Ensure chat history matches the same width as the chat box and header */
@@ -362,7 +363,7 @@ margin: 0 auto 15px; /* Centers it and adds bottom margin */
   border: 2px solid #ffffff; /* White border to create separation */
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 15%;
 }
 
 .profile-section .bi {
@@ -381,4 +382,54 @@ margin: 0 auto 15px; /* Centers it and adds bottom margin */
   text-shadow: 0px 0px 1px #007bff; /* Add subtle shadow for thickness */
 }
 
+.nav-tabs .nav-link {
+  border: none;
+  border-bottom: 2px solid transparent; /* Default transparent border */
+  color: #333;
+  font-weight: 500;
+}
 
+.nav-tabs .nav-link.active {
+  border-bottom: 2px solid #000; /* Underline for the active tab */
+  font-weight: bold;
+  color: #000;
+}
+
+.notification-badge {
+  display: inline-block;
+  width: 24px; /* Adjust size as needed */
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 0.9rem; /* Adjust font size as needed */
+  background-color: #e9f4ff; /* Light blue background */
+  color: #007bff; /* Text color */
+  border-radius: 50%; /* Makes the badge circular */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #f5faff; /* Light background */
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+}
+.input-container i {
+  font-size: 1rem; /* Smaller font size */
+  margin-right: 10px;
+  color: #6c757d; /* Icon color */
+  cursor: pointer;
+}
+.input-field {
+  border: none;
+  flex-grow: 1;
+  outline: none;
+  background-color: transparent;
+  color: #6c757d;
+}
+.send-icon {
+  font-size: 1.2rem; /* Smaller send icon */
+  color: #6c757d;
+  cursor: pointer;
+}

@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Name</title>
+    <title>Projects Page</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
     <!-- Bootstrap Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        /* Tooltip styling */
+        #infoTooltip {
+            display: none;
+            position: absolute;
+            top: 2rem;
+            right: 0;
+            background-color: #e9f7ff;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 8px;
+            z-index: 1000;
+            max-width: 300px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-icon:hover + #infoTooltip,
+        #infoTooltip:hover {
+            display: block;
+        }
+
+        #infoTooltip h5 {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -18,23 +43,26 @@
             <nav id="sidebar" class="col-md-2 col-lg-2 d-md-block bg-light sidebar">
                 <div class="d-flex flex-column py-3">
                     <!-- Main Profile Header -->
-          <div class="profile-section d-flex align-items-center px-3 mb-3">
-            <div class="gradient-circle-profile me-2"></div> <!-- Replace the image with the gradient circle -->
-            <div>
-              <p class="mb-0 fw-bold">Fluwd</p>
-              <small>Your AI Project Manager</small>
-            </div>
-          </div>
-      
-                
+                    <div class="profile-section d-flex align-items-center px-3 mb-3">
+                        <a href="index.html" style="text-decoration: none; color: inherit;"></a>
+                        <div class="gradient-circle-profile me-2"></div> <!-- Replace the image with the gradient circle -->
+                      </a>
+                        <div>
+                          <a href="index.html" style="text-decoration: none; color: inherit;">
+                          <p class="mb-0 fw-bold">Fluwd</p>
+                          </a>
+                          <small>Your AI Project Manager</small>
+                        </div>
+                      </div>
+                    
                     <!-- Divider Line -->
                     <hr class="section-divider">
-                
+                    
                     <!-- Profile Avatar and Location -->
                     <div class="text-center mt-2">
                         <div class="profile-section d-flex align-items-center px-3 mb-3 position-relative">
                             <div class="profile-container me-2 position-relative">
-                                <div class="gradient-circle-profile"></div> <!-- Original gradient profile picture -->
+                                <img src="designluch.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover; border: 2px solid #9b9b9b;">
                                 <div class="activity-status"></div>
                             </div>
                             <div>
@@ -48,87 +76,351 @@
                             </div>
                         </div>
                     </div>
-                
+                    
                     <!-- Divider Line -->
                     <hr class="section-divider">
-                
+                    
                     <!-- Sidebar Navigation -->
                     <ul class="nav flex-column px-2">
                         <li class="nav-item my-2">
-                            <a class="nav-link d-flex align-items-center" href="dashboard.html">
-                                <i class="bi bi-house-door me-2"></i> <span class="fw-bold">Dashboard</span>
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="dashboard.html">
+                                <div>
+                                    <i class="bi bi-house-door me-2"></i> <span class="fw-bold">Dashboard</span>
+                                </div>
+                                <span class="notification-badge">2</span>
                             </a>
                         </li>
                         <li class="nav-item my-2">
-                            <a class="nav-link d-flex align-items-center" href="portfolio.html">
-                                <i class="bi bi-bar-chart me-2"></i> <span class="fw-bold">Portfolio</span>
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="portfolio.html">
+                                <div>
+                                    <i class="bi bi-bar-chart me-2"></i> <span class="fw-bold">Portfolio</span>
+                                </div>
                             </a>
                         </li>
                         <li class="nav-item my-2">
-                            <a class="nav-link d-flex align-items-center" href="program.html">
-                                <i class="bi bi-folder me-2"></i> <span class="fw-bold">Program</span>
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="program.html">
+                                <div>
+                                    <i class="bi bi-folder me-2"></i> <span class="fw-bold">Program</span>
+                                </div>
                             </a>
                         </li>
                         <li class="nav-item my-2">
-                            <a class="nav-link d-flex align-items-center" href="projects.html">
-                                <i class="bi bi-list-check me-2"></i> <span class="fw-bold">Projects</span>
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="projects.html">
+                                <div>
+                                    <i class="bi bi-list-check me-2"></i> <span class="fw-bold">Projects</span>
+                                </div>
                             </a>
                         </li>
                         <li class="nav-item my-2">
-                            <a class="nav-link d-flex align-items-center" href="boards.html">
-                                <i class="bi bi-chat-left-dots me-2"></i> <span class="fw-bold">Boards</span>
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="boards.html">
+                                <div>
+                                    <i class="bi bi-chat-left-dots me-2"></i> <span class="fw-bold">Boards</span>
+                                </div>
+                                <span class="notification-badge">5</span>
                             </a>
                         </li>
                         <li class="nav-item my-2">
-                            <a class="nav-link d-flex align-items-center" href="inbox.html">
-                                <i class="bi bi-inbox me-2"></i> <span class="fw-bold">Inbox</span>
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="inbox.html">
+                                <div>
+                                    <i class="bi bi-inbox me-2"></i> <span class="fw-bold">Inbox</span>
+                                </div>
+                                <span class="notification-badge">4</span>
                             </a>
                         </li>
                         <li class="nav-item my-2">
-                            <a class="nav-link d-flex align-items-center" href="analytics.html">
-                                <i class="bi bi-graph-up me-2"></i> <span class="fw-bold">Analytics</span>
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="analytics.html">
+                                <div>
+                                    <i class="bi bi-graph-up me-2"></i> <span class="fw-bold">Analytics</span>
+                                </div>
+                                <span class="notification-badge">2</span>
                             </a>
                         </li>
                         <li class="nav-item my-2">
-                            <a class="nav-link d-flex align-items-center" href="settings.html">
-                                <i class="bi bi-gear me-2"></i> <span class="fw-bold">Settings</span>
+                            <a class="nav-link d-flex justify-content-between align-items-center" href="settings.html">
+                                <div>
+                                    <i class="bi bi-gear me-2"></i> <span class="fw-bold">Settings</span>
+                                </div>
+                                <span class="notification-badge">2</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            
-            
-      
-          <!-- Main Content Area -->
-          <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4 py-4">
-            <!-- Header Section -->
-            <div class="header-section d-flex justify-content-between align-items-center p-3 mb-4 shadow-sm bg-light rounded" style="margin-left: 15px; margin-right: 15px;">
-              <div>
-                <h4 class="mb-0 fw-bold">Welcome, Alexander</h4> <!-- Reduced from h3 to h4 -->
-                <small>Today is Saturday, 11th November 2024.</small>
-              </div>
-              <div class="d-flex align-items-center">
-                <i class="bi bi-bell me-3" style="font-size: 1.5rem; cursor: pointer;"></i>
-                <div class="d-flex align-items-center">
-                    <img src="pfpuser.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
-                  <div>
-                    <p class="mb-0 fw-bold" style="font-size: 0.9rem;">Ruben Vetrov</p>
-                    <small>PMO</small>
-                  </div>
+
+            <!-- Main Content Area -->
+            <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <!-- Header Section -->
+                <div class="header-section d-flex justify-content-between align-items-center p-3 mb-4 shadow-sm bg-light rounded" style="margin-left: 15px; margin-right: 15px;">
+                    <div>
+                        <h4 class="mb-0 fw-bold">Welcome, Alexander</h4>
+                        <small>Today is Saturday, 11th November 2024.</small>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-bell-fill me-3" style="font-size: 1.5rem; cursor: pointer;"></i>
+                        <div class="d-flex align-items-center">
+                            <img src="pfpuser.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                            <div>
+                                <p class="mb-0 fw-bold" style="font-size: 0.9rem;">Ruben Vetrov</p>
+                                <small>PMO</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          
+                
+                <!-- Page Title -->
                 <div class="pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Projects</h1>
                 </div>
-                <div class="content">
-                    <p>This is the main content for the projects</p>
+
+                <!-- Project Options -->
+                <div class="d-flex gap-4 mb-4">
+                    <button id="charterTemplateBtn" class="btn btn-primary">Project Charter Template</button>
+                    <button id="myProjectBtn" class="btn btn-secondary">My Project</button>
+                </div>
+
+                <!-- Content Display -->
+                <div id="projectContent" class="content">
+                    <p>Select an option to display content.</p>
                 </div>
             </main>
         </div>
     </div>
+
+
+    <!-- JavaScript to handle button clicks -->
+    <script>
+      document.getElementById('charterTemplateBtn').addEventListener('click', function() {
+    document.getElementById('projectContent').innerHTML = `
+        <div class="card shadow-sm p-4 mb-4 position-relative">
+            <div class="d-flex justify-content-end mb-2 position-relative">
+                        <i class="bi bi-info-circle info-icon" style="font-size: 1.5rem; cursor: pointer;"></i>
+                        <div id="infoTooltip">
+                            <p>The main sections of a project charter</p>
+                            <h5>Project Overview</h5>
+                            <ul>
+                                <li><strong>Project Name:</strong> The title of the project.</li>
+                                <li><strong>Project Sponsor:</strong> The person or organization funding the project.</li>
+                                <li><strong>Project Manager:</strong> The individual responsible for planning, executing, and closing the project.</li>
+                                <li><strong>Project Duration:</strong> The start and end dates of the project.</li>
+                                <li><strong>Project Budget:</strong> The estimated cost of the project.</li>
+                            </ul>
+                        </div>
+                    </div>
+            <h1 class="mb-3 fw-800">Project Charter</h1>
+            <p>1 backlink</p>
+            <p> Fluwd MVP / 🎲 Hybrid Project Management / 🧩 Project Charter </p> 
+            
+            
+
+            <!-- Beige Box for Header -->
+            <div style="background-color: #f5f5dc; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                <h2 class="h5 mb-2">
+                    <span style="margin-right: 0.5rem;">💡</span>
+                    Create a Project Charter to bind the boundaries of the project, identify key stakeholders, and set baseline targets.
+                </h2>
+            </div>
+
+            <!-- Main Container for the Project Details -->
+            <div class="container-box p-3" style="border: 2px solid #dee2e6; border-radius: 8px; background-color: #ffffff;">
+                <!-- Project Info -->
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Project Name:</th>
+                        <td>Hybrid Project using Waterfall and Agile</td>
+                        <th>Requested by:</th>
+                        <td>Name, Product Owner</td>
+                    </tr>
+                    <tr>
+                        <th>Author:</th>
+                        <td>Name, Project Manager</td>
+                        <th>Approved by:</th>
+                        <td>
+                            <div>
+                                <input type="checkbox"> Name, Project Sponsor<br>
+                                <input type="checkbox"> Name, Business Sponsor
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Date Submitted:</th>
+                        <td>MMM DD, YYYY</td>
+                        <th>Version:</th>
+                        <td>1.0</td>
+                    </tr>
+                </table>
+
+                <!-- 'What' section -->
+                <h3 class="h5 mt-4">What</h3>
+                <div style="background-color: #f5f5dc; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h2 class="h5 mb-2">
+                        <span style="margin-right: 0.5rem;">💡</span>
+                        Describe the nature of the request (the problem trying to be solved)
+                    </h2>
+                </div>
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="background-color: #f5f5dc;">For</th>
+                        <td>Describe the customer with 3-4 characteristics (who are they)</td>
+                    </tr>
+                    <tr>
+                        <th style="background-color: #f5f5dc;">Who is trying to</th>
+                        <td>What is the customer trying to achieve (objectives/goals)</td>
+                    </tr>
+                    <tr>
+                        <th style="background-color: #f5f5dc;">But</th>
+                        <td>What are their problems, challenges, or barriers to implementation</td>
+                    </tr>
+                    <tr>
+                        <th style="background-color: #f5f5dc;">Because</th>
+                        <td>Describe why this problem exists</td>
+                    </tr>
+                    <tr>
+                        <th style="background-color: #f5f5dc;">Outcome</th>
+                        <td>Describe the problem’s impact on the customer</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 'Why' section -->
+            <h3 class="h5 mt-4">Why</h3>
+            <div style="background-color: #f5f5dc; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                <h2 class="h5 mb-2">
+                    <span style="margin-right: 0.5rem;">💡</span>
+                    Describe target objectives, expected business outcomes, and benefits. Goals should be SMART:
+                </h2>
+                <ul class="mt-2">
+                    <li><strong>Specific:</strong> Linked to one activity, thought, or idea.</li>
+                    <li><strong>Measurable:</strong> Something that can be tracked, measured, or measure progress toward.</li>
+                    <li><strong>Actionable:</strong> There should be clear tasks or actions to take in order to progress.</li>
+                    <li><strong>Realistic:</strong> Should be possible to achieve.</li>
+                    <li><strong>Time-bound:</strong> Should fall within a specific time period.</li>
+                </ul>
+            </div>
+
+  <div style="border-radius: 8px; background-color: #ffffff; margin-bottom: 1rem; border:>
+    <!-- Tab Navigation -->
+    
+
+    <div style="border-radius: 8px; background-color: #ffffff; margin-bottom: 1rem; border: 0.5px solid #dee2e6">
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs" id="projectTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="business-requirements-tab" data-bs-toggle="tab" data-bs-target="#business-requirements" type="button" role="tab" aria-controls="business-requirements" aria-selected="true">
+                <i class="bi bi-table"></i> Business Requirements
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="traceability-matrix-tab" data-bs-toggle="tab" data-bs-target="#traceability-matrix" type="button" role="tab" aria-controls="traceability-matrix" aria-selected="false">
+                <i class="bi bi-table"></i> Traceability Matrix
+            </button>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="projectTabsContent">
+        <!-- Business Requirements Table -->
+        <div class="tab-pane fade show active" id="business-requirements" role="tabpanel" aria-labelledby="business-requirements-tab">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Aa BR ID</th>
+                        <th>Objective</th>
+                        <th>Business Benefit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>OBJ-01</strong></td>
+                        <td>To build a full cycle project management tool</td>
+                        <td>Consistency across all teams</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OBJ-02</strong></td>
+                        <td>To enhance...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OBJ-03</strong></td>
+                        <td>To develop...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OBJ-04</strong></td>
+                        <td>To promote...</td>
+                        <td>...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Traceability Matrix Table -->
+        <div class="tab-pane fade" id="traceability-matrix" role="tabpanel" aria-labelledby="traceability-matrix-tab">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Trace ID</th>
+                        <th>Related Requirement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>TM-001</strong></td>
+                        <td>OBJ-01</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TM-002</strong></td>
+                        <td>OBJ-02</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    `;
+});
+
+function openTab(event, tabName) {
+    // Hide all tab content
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => {
+        content.style.display = 'none';
+        content.classList.remove('active');
+    });
+
+    // Remove 'active' class from all tabs
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Show the selected tab content and add 'active' class to the clicked tab
+    document.getElementById(tabName).style.display = 'block';
+    document.getElementById(tabName).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+
+// Set the default tab to display
+document.querySelector('.tab').click();
+
+document.getElementById('infoIcon').addEventListener('mouseenter', function() {
+        document.getElementById('infoTooltip').style.display = 'block';
+    });
+
+    document.getElementById('infoIcon').addEventListener('mouseleave', function() {
+        document.getElementById('infoTooltip').style.display = 'none';
+    });
+
+
+        document.getElementById('myProjectBtn').addEventListener('click', function() {
+            document.getElementById('projectContent').innerHTML = `
+                <div class="card shadow-sm p-4 mb-4">
+                    <h2 class="h4 mb-3">My Project</h2>
+                    <p>This section will show your project details and relevant information.</p>
+                </div>
+            `;
+        });
+
+    </script>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
