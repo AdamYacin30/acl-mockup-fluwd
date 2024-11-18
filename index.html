@@ -125,7 +125,7 @@
       
 
     <!-- Main Content Area -->
-    <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4 py-4">
+    <main class="col-md-10 ms-sm-auto col-lg-10 px-md-5 py-4">
       <!-- Header Section -->
       <div class="header-section d-flex justify-content-between align-items-center p-3 mb-4 shadow-sm bg-light rounded" style="margin-left: 15px; margin-right: 15px;">
         <div>
@@ -186,6 +186,13 @@
 <div id="chatHistory" class="chat-history-container mt-4 aligned-container" style="margin-left: 15px; margin-right: 15px;">
 </div>
 
+<!-- Regenerate Response Button Section -->
+<div id="regenerateResponseContainer" class="text-center mb-4" style="margin-left: 15px; margin-right: 15px; display: none;">
+  <button id="regenerateBtn" class="btn btn-outline-primary" style="border-radius: 50px; padding: 0.5rem 1.5rem; font-size: 1rem;">
+    <i class="bi bi-arrow-clockwise me-2"></i> Regenerate response
+  </button>
+</div>
+
 <!-- Chat Box Section -->
 <div id="welcomeContainer" class="welcome-container mb-5" style="margin-left: 15px; margin-right: 15px;">
   <div class="chat-box d-flex align-items-center">
@@ -198,96 +205,127 @@
 </div>
 
 
+
+
 <script>
 document.getElementById('sendBtn').addEventListener('click', function() {
-  const chatInput = document.getElementById('chatInput');
-  const chatHistory = document.getElementById('chatHistory');
-  const userMessage = chatInput.value.trim();
-  const welcomeContainer = document.getElementById('welcomeContainer');
-  const actionCardsContainer = document.getElementById('actionCardsContainer');
-
-  if (userMessage !== '') {
-    // Hide elements with a class for better consistency
-    welcomeContainer.classList.add('hidden');
-    actionCardsContainer.classList.add('hidden');
-
-    // Append user message with profile image to chat history
-    const userMessageContainer = document.createElement('div');
-    userMessageContainer.classList.add('d-flex', 'align-items-start', 'mb-3', 'fade-up');
-
-    const userImage = document.createElement('img');
-    userImage.src = 'pfpuser.png'; // Replace with the path to the user's profile image
-    userImage.alt = 'User';
-    userImage.classList.add('rounded-circle', 'me-2');
-    userImage.style.width = '40px'; // Adjust size as needed
-    userImage.style.marginTop = "0.5rem";
-
-    const userMessageDiv = document.createElement('div');
-    userMessageDiv.classList.add('alert', 'alert-primary', 'text-start', 'flex-grow-1');
-    userMessageDiv.innerHTML = `<strong>You:</strong> ${userMessage}`;
-
-    userMessageContainer.appendChild(userImage);
-    userMessageContainer.appendChild(userMessageDiv);
-    chatHistory.appendChild(userMessageContainer);
-
-    // Scroll to the bottom of chat history immediately
-    chatHistory.scrollTop = chatHistory.scrollHeight;
-
-    // Clear chat input
-    chatInput.value = '';
-
-    // Wait 1 second before showing the chatbot response
-    setTimeout(() => {
-      // Mock response from the chatbot with profile image
-      const responseMessageContainer = document.createElement('div');
-      responseMessageContainer.classList.add('d-flex', 'align-items-start', 'mb-3', 'fade-up');
-
-      const botImage = document.createElement('img');
-      botImage.src = 'pfpbot.png'; // Replace with the path to the chatbot's profile image
-      botImage.alt = 'Fluwd';
-      botImage.classList.add('rounded-circle', 'me-2');
-      botImage.style.width = '40px'; // Adjust size as needed
-      botImage.style.marginTop = "0.5rem";
-
-      const responseMessageDiv = document.createElement('div');
-      responseMessageDiv.classList.add('alert', 'alert-secondary', 'text-start', 'flex-grow-1');
-      responseMessageDiv.innerHTML = `
-        <strong>Fluwd:</strong>
-        <p>To resolve issues of a delayed project schedule, consider implementing the following strategies:</p>
-        <p><strong>Strategies to Resolve Delayed Project Schedules</strong></p>
-        <ol>
-          <li>
-            <strong>Conduct a Root Cause Analysis</strong><br>
-            Identify the reasons behind the delays. Common causes can include scope creep, resource shortages, technical challenges, or inadequate planning.
-          </li>
-          <p></p>
-          <li>
-            <strong>Re-Evaluate and Adjust the Project Plan</strong><br>
-            <ul>
-              <li>Break Down Tasks: Ensure tasks are broken down into smaller, manageable units.</li>
-              <li>Prioritise Tasks: Focus on critical path activities that directly impact the project deadline.</li>
-              <li>Update Schedule: Adjust timelines based on current progress and realistic estimates.</li>
-            </ul>
-          </li>
-          <p></p>
-          <li>
-            <strong>Improve Communication</strong><br>
-            <ul>
-              <li>Regular Updates: Hold frequent status meetings to track progress and identify issues early.</li>
-              <li>Clear Channels: Ensure there are clear communication channels among team members, stakeholders, and management.</li>
-            </ul>
-          </li>
-        </ol>
-      `;
-
-      responseMessageContainer.appendChild(botImage);
-      responseMessageContainer.appendChild(responseMessageDiv);
-      chatHistory.appendChild(responseMessageContainer);
-
-      // Scroll to the bottom of chat history after response appears
-      chatHistory.scrollTop = chatHistory.scrollHeight;
-    }, 1000); // 1000 milliseconds = 1 second
-  }
+    sendMessage();
 });
+
+function sendMessage(predefinedMessage = '') {
+    const chatInput = document.getElementById('chatInput');
+    const chatHistory = document.getElementById('chatHistory');
+    const userMessage = predefinedMessage || chatInput.value.trim();
+    const welcomeContainer = document.getElementById('welcomeContainer');
+    const actionCardsContainer = document.getElementById('actionCardsContainer');
+
+    if (userMessage !== '') {
+        // Hide elements with a class for better consistency
+        welcomeContainer.classList.add('hidden');
+        actionCardsContainer.classList.add('hidden');
+
+        // Append user message with profile image to chat history
+        const userMessageContainer = document.createElement('div');
+        userMessageContainer.classList.add('d-flex', 'align-items-start', 'mb-3', 'fade-up');
+
+        const userImage = document.createElement('img');
+        userImage.src = 'pfpuser.png'; // Replace with the path to the user's profile image
+        userImage.alt = 'User';
+        userImage.classList.add('rounded-circle', 'me-2');
+        userImage.style.width = '40px'; // Adjust size as needed
+        userImage.style.marginTop = "0.5rem";
+
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.classList.add('alert', 'alert-primary', 'text-start', 'flex-grow-1');
+        userMessageDiv.innerHTML = `<strong>You:</strong> ${userMessage}`;
+
+        userMessageContainer.appendChild(userImage);
+        userMessageContainer.appendChild(userMessageDiv);
+        chatHistory.appendChild(userMessageContainer);
+
+        // Scroll to the bottom of chat history immediately
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+
+        // Clear chat input if not a predefined message
+        if (!predefinedMessage) {
+            chatInput.value = '';
+        }
+
+        // Wait 1 second before showing the chatbot response
+        setTimeout(() => {
+            // Mock response from the chatbot with profile image
+            const responseMessageContainer = document.createElement('div');
+            responseMessageContainer.classList.add('d-flex', 'align-items-start', 'mb-3', 'fade-up');
+
+            const botImage = document.createElement('img');
+            botImage.src = 'pfpbot.png'; // Replace with the path to the chatbot's profile image
+            botImage.alt = 'Fluwd';
+            botImage.classList.add('rounded-circle', 'me-2');
+            botImage.style.width = '40px'; // Adjust size as needed
+            botImage.style.marginTop = "0.5rem";
+
+            const responseMessageDiv = document.createElement('div');
+            responseMessageDiv.classList.add('alert', 'alert-secondary', 'text-start', 'flex-grow-1');
+            responseMessageDiv.innerHTML = `
+                <strong>Fluwd:</strong>
+                <p>To resolve issues of a delayed project schedule, consider implementing the following strategies:</p>
+                <p><strong>Strategies to Resolve Delayed Project Schedules</strong></p>
+                <ol>
+                    <li>
+                        <strong>Conduct a Root Cause Analysis</strong><br>
+                        Identify the reasons behind the delays. Common causes can include scope creep, resource shortages, technical challenges, or inadequate planning.
+                    </li>
+                    <li>
+                        <strong>Re-Evaluate and Adjust the Project Plan</strong><br>
+                        <ul>
+                            <li>Break Down Tasks: Ensure tasks are broken down into smaller, manageable units.</li>
+                            <li>Prioritise Tasks: Focus on critical path activities that directly impact the project deadline.</li>
+                            <li>Update Schedule: Adjust timelines based on current progress and realistic estimates.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Improve Communication</strong><br>
+                        <ul>
+                            <li>Regular Updates: Hold frequent status meetings to track progress and identify issues early.</li>
+                            <li>Clear Channels: Ensure there are clear communication channels among team members, stakeholders, and management.</li>
+                        </ul>
+                    </li>
+                </ol>
+            `;
+
+            responseMessageContainer.appendChild(botImage);
+            responseMessageContainer.appendChild(responseMessageDiv);
+            chatHistory.appendChild(responseMessageContainer);
+
+            // Add the 'Regenerate Response' button
+            const regenerateContainer = document.createElement('div');
+            regenerateContainer.classList.add('text-center', 'mt-3', 'mb-4');
+            regenerateContainer.style.marginLeft = '15px';
+            regenerateContainer.style.marginRight = '15px';
+
+            const regenerateButton = document.createElement('button');
+            regenerateButton.classList.add('btn', 'mt-3');
+            regenerateButton.style.backgroundColor = '#ffffff'; // Light gray color
+            regenerateButton.style.color = '#6c757d'; // Text color (darker gray)
+            regenerateButton.style.border = 'none'; // Remove border
+            regenerateButton.style.padding = '10px 20px';
+            regenerateButton.style.borderRadius = '20px'; // Rounded corners
+            regenerateButton.style.boxShadow = '0px 2px 5px rgba(0, 0, 0, 0.1)'; // Subtle shadow
+            regenerateButton.innerHTML = `<i class="bi bi-arrow-clockwise me-2"></i> Regenerate response`;
+            regenerateButton.onclick = function() {
+                sendMessage("What should I do to help resolve the issue of delayed project schedule?");
+            };
+
+            regenerateContainer.appendChild(regenerateButton);
+            chatHistory.appendChild(regenerateContainer);
+
+            // Scroll to the bottom of chat history after response appears
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }, 1000); // 1000 milliseconds = 1 second
+    }
+}
+
+
+
 
 </script>
