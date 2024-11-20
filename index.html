@@ -37,7 +37,7 @@
                 <div class="text-center mt-2">
                   <div class="profile-section d-flex align-items-center px-3 mb-3 position-relative">
                       <div class="profile-container me-2 position-relative">
-                          <img src="designluch.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover; border: 2px solid #9b9b9b;">
+                          <img src="img/designluch.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover; border: 2px solid #9b9b9b;">
                           <div class="activity-status"></div>
                       </div>
                       <div>
@@ -136,7 +136,7 @@
             <i class="bi bi-bell-fill me-3" style="font-size: 1.5rem; cursor: pointer;"></i>
             <div class="dropdown">
                 <div class="d-flex align-items-center" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
-                    <img src="pfpuser.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                    <img src="img/pfpuser.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
                     <div>
                         <p class="mb-0 fw-bold" style="font-size: 0.9rem;">Ruben Vetrov</p>
                         <small>PMO</small>
@@ -238,7 +238,7 @@ function sendMessage(predefinedMessage = '') {
         userMessageContainer.classList.add('d-flex', 'align-items-start', 'mb-3', 'fade-up');
 
         const userImage = document.createElement('img');
-        userImage.src = 'pfpuser.png'; // Replace with the path to the user's profile image
+        userImage.src = 'img/pfpuser.png'; // Replace with the path to the user's profile image
         userImage.alt = 'User';
         userImage.classList.add('rounded-circle', 'me-2');
         userImage.style.width = '40px'; // Adjust size as needed
@@ -267,7 +267,7 @@ function sendMessage(predefinedMessage = '') {
             responseMessageContainer.classList.add('d-flex', 'align-items-start', 'mb-3', 'fade-up');
 
             const botImage = document.createElement('img');
-            botImage.src = 'pfpbot.png'; // Replace with the path to the chatbot's profile image
+            botImage.src = 'img/pfpbot.png'; // Replace with the path to the chatbot's profile image
             botImage.alt = 'Fluwd';
             botImage.classList.add('rounded-circle', 'me-2');
             botImage.style.width = '40px'; // Adjust size as needed
