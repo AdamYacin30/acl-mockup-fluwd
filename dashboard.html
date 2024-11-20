@@ -133,20 +133,29 @@
         <!-- Header Section -->
         <div class="header-section d-flex justify-content-between align-items-center p-3 mb-4 shadow-sm bg-light rounded" style="margin-left: 15px; margin-right: 15px;">
           <div>
-            <h4 class="mb-0 fw-bold">Welcome, Alexander</h4> <!-- Reduced from h3 to h4 -->
-            <small>Today is Saturday, 11th November 2024.</small>
+              <h4 class="mb-0 fw-bold">Welcome, Alexander</h4>
+              <small>Today is Saturday, 11th November 2024.</small>
           </div>
           <div class="d-flex align-items-center">
-            <i class="bi bi-bell-fill me-3" style="font-size: 1.5rem; cursor: pointer;"></i>
-            <div class="d-flex align-items-center">
-                <img src="pfpuser.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
-              <div>
-                <p class="mb-0 fw-bold" style="font-size: 0.9rem;">Ruben Vetrov</p>
-                <small>PMO</small>
+              <i class="bi bi-bell-fill me-3" style="font-size: 1.5rem; cursor: pointer;"></i>
+              <div class="dropdown">
+                  <div class="d-flex align-items-center" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                      <img src="pfpuser.png" alt="Profile Image" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                      <div>
+                          <p class="mb-0 fw-bold" style="font-size: 0.9rem;">Ruben Vetrov</p>
+                          <small>PMO</small>
+                      </div>
+                      <i class="bi bi-chevron-down ms-2"></i>
+                  </div>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Log Out</a></li>
+                  </ul>
               </div>
-            </div>
           </div>
-        </div>
+      </div>
       
           <!-- Summary cards -->
           <div class="row mb-4 g-3">

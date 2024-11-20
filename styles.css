@@ -1,12 +1,11 @@
-/* Custom Styles */
 body {
   background-color: #f8fbff;
 }
 
 #sidebar {
-  background-color: #f0f4f8;
+  background-color: #f0f4f8;;
   height: 100vh;
-  padding: 20px 0;
+  padding: 15px 0;
   border-right: 1px solid #e0e4e8;
   position: fixed;
 }
@@ -22,11 +21,8 @@ body {
   font-weight: bold;
   font-size: 1.2rem;
   transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: #007bff;
-}
+  font-size: 1rem;
+  }
 
 .welcome-section h4 {
   color: #333;
@@ -34,9 +30,13 @@ body {
 
 .action-card {
   border: none;
-  border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  transition: transform 0.2s;
+  border-radius: 15px;
 }
 
 .card-title {
@@ -47,18 +47,14 @@ body {
   border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .avatar-section img {
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border: 2px solid #e0e4e8; /* Optional: Add a border for better appearance */
+  border: 2px solid #e0e4e8;
 }
-#sidebar {
-  background-color: #f8fbff;
-  height: 100vh;
-  padding: 15px 0;
-  border-right: 1px solid #e0e4e8;
-}
+
 
 .profile-section {
   display: flex;
@@ -72,19 +68,6 @@ body {
   object-fit: cover;
 }
 
-.avatar-section img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border: 2px solid #e0e4e8; /* Optional border */
-}
-
-.nav-link {
-  color: #555;
-  font-size: 1rem;
-}
-
-
 .nav-link:hover {
   color: #007bff;
 }
@@ -93,9 +76,10 @@ body {
   font-size: 0.9rem;
   color: #555;
 }
+
 .section-divider {
   border: 0;
-  border-top: 2.5px solid #b0b0b0; /* Darker grey color */
+  border-top: 2.5px solid #b0b0b0; 
   margin: 10px 0;
 }
 
@@ -103,27 +87,26 @@ body {
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 15px; /* Add margin to bring it in from the edges */
+  margin: 0 15px;
 }
 
 .greeting {
-  font-size: 2.5rem; /* Size for "Hello, Alexander" */
-  font-weight: 700;  /* Thickness */
+  font-size: 2.5rem; 
+  font-weight: 700;
   color: #333;
 }
 
 .lead {
-  font-size: 2.75rem; /* Slightly larger size for "How can I help you today?" */
-  font-weight: 800;   /* Bolder weight */
+  font-size: 2.75rem;
+  font-weight: 800; 
   color: #555;
 }
 
-
 .gradient-text {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #2575fc, #6a11cb, #ffb347);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+  }
 
 .action-card:hover {
   transform: translateY(-5px);
@@ -133,16 +116,17 @@ body {
   font-weight: bold;
 }
 
-.search-bar input {
-  border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
 .chat-box-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 15px; /* Add padding to ensure space from the edges */
+  padding: 0 15px;
+  padding: 0; 
+  max-width: 100%;
+  margin-left: 15px; 
+  margin-right: 15px;
 }
+
 
 .chat-box input {
   flex: 1;
@@ -164,24 +148,6 @@ margin-left: 15px;
 margin-right: 15px;
 }
 
-
-.d-flex.justify-content-between {
-margin-left: 15px; /* Ensure it aligns with the chat box and header section */
-margin-right: 15px; /* Ensure it aligns with the chat box and header section */
-gap: 15px; /* Adjust gap between cards if necessary */
-}
-
-.action-card {
-flex: 1; /* Make sure the action cards take up equal space */
-min-width: 250px; /* Consistent minimum width */
-border-radius: 15px;
-background-color: #fff;
-padding: 20px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-transition: transform 0.2s;
-}
-
-
 .header-section,
 .welcome-container,
 .chat-box-container {
@@ -189,18 +155,12 @@ margin-left: 15px;
 margin-right: 15px;
 }
 
-.chat-box-container {
-max-width: 100%; /* Ensure it matches the full width of the content area */
-margin-left: 15px; /* Match the left margin of the content above */
-margin-right: 15px; /* Match the right margin of the content above */
-padding: 0; /* Remove additional padding */
-}
-
 .chat-box {
-width: 100%; /* Extend the chat box to fill the container */
+width: 100%;
 background-color: #ffffff;
-border-radius: 20px;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+border-radius: 15px; 
+padding: 30px 45px;
 }
 
 .container-section {
@@ -208,48 +168,34 @@ margin-left: 15px;
 margin-right: 15px;
 }
 
-.action-card {
-flex: 1;
-border: none;
-border-radius: 15px;
-background-color: #fff;
-padding: 20px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-transition: transform 0.2s;
-}
 
 .d-flex.justify-content-between {
 margin-left: 15px;
 margin-right: 15px;
-gap: 20px; /* Adjust the gap between cards for spacing */
-}
-
-.gradient-text {
-background: linear-gradient(135deg, #2575fc, #6a11cb, #ffb347); /* Diagonal gradient: top left to bottom right */
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+gap: 15px;
 }
 
 .gradient-circle {
-width: 60px; /* Adjust size as needed */
+width: 60px;
 height: 60px;
-background: linear-gradient(135deg, #2575fc, #6a11cb, #ffb347); /* Diagonal gradient */
-border-radius: 50%; /* Makes it a circle */
-margin: 0 auto 15px; /* Centers it and adds bottom margin */
+background: linear-gradient(135deg, #2575fc, #6a11cb, #ffb347); 
+border-radius: 50%; 
+margin: 0 auto 15px;
 }
 
 .gradient-circle-profile {
-  width: 40px; /* Set size to 40x40 */
+  width: 40px; 
   height: 40px;
-  background: linear-gradient(135deg, #2575fc, #6a11cb, #ffb347); /* Diagonal gradient */
-  border-radius: 50%; /* Makes it a circle */
+  background: linear-gradient(135deg, #2575fc, #6a11cb, #ffb347); 
+  border-radius: 50%; 
+  position: relative; 
 }
 
 
 .card {
-  border: none; /* Remove borders */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  border: none; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .row > .col-lg-6 {
@@ -287,140 +233,117 @@ margin: 0 auto 15px; /* Centers it and adds bottom margin */
 }
 
 .aligned-container {
-  max-width: 900px; /* Adjust this value to match the width of your welcome container */
+  max-width: 900px;
   margin: auto;
-  width: 100%; /* Full width within the allowed max-width */
+  width: 100%; 
 }
 
-.chat-box-container {
-  max-width: 900px; /* Match this value with the welcome container */
-  margin: 0 auto; /* Center align */
-  padding: 0; /* Remove any padding */
-}
-
-.chat-box {
-  width: 100%; /* Extend the chat box to fill the container */
-  background-color: #ffffff;
-  border-radius: 15px; /* Match the styling of the welcome container */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 30px 45px; /* Add inner padding for better content spacing */
-}
-
-/* Ensure chat history matches the same width as the chat box and header */
-/* Ensure chat history matches the same width as the chat box and header */
 .chat-history-container {
-  max-width: 100%; /* Extend to match the full width of the content */
-  margin-left: 15px; /* Align with the header section and chat box */
-  margin-right: 15px; /* Align with the header section and chat box */
-  width: auto; /* Let it naturally fill the container width */
-  padding: 0; /* Remove any internal padding */
+  max-width: 100%; 
+  margin-left: 15px;
+  margin-right: 15px;
+  width: auto;
+  padding: 0;
 }
 
 .fade-up {
   opacity: 0;
-  transform: translateY(20px); /* Start with the element moved down */
+  transform: translateY(20px); 
   animation: fadeUp 0.5s forwards;
 }
 
 @keyframes fadeUp {
   to {
     opacity: 1;
-    transform: translateY(0); /* Move the element up to its original position */
+    transform: translateY(0); 
   }
 }
 
 .profile-section-container {
-  margin-top: 20px; /* Adjust to desired spacing */
-  margin-bottom: 10px; /* Adjust to desired spacing */
+  margin-top: 20px; 
+  margin-bottom: 10px;
 }
 
-/* Outer gray border */
+
 .outer-gray-border {
-  width: 46px; /* Slightly larger to add the gray border around the inner circle */
+  width: 46px;
   height: 46px;
   border-radius: 50%;
-  background-color: #dcdcdc; /* Gray color */
+  background-color: #dcdcdc; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Inner gradient circle (profile picture) */
-.gradient-circle-profile {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #2575fc, #6a11cb, #ffb347); /* Gradient background */
-  border-radius: 50%; /* Makes it a circle */
-  position: relative; /* Position for the status indicator */
-}
 
-/* Green online status indicator */
 .activity-status {
   width: 10px;
   height: 10px;
-  background-color: #28a745; /* Green color */
-  border-radius: 50%; /* Makes it a circle */
-  border: 2px solid #ffffff; /* White border to create separation */
+  background-color: #28a745;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
   position: absolute;
   bottom: 0;
   right: 15%;
 }
 
 .profile-section .bi {
-  font-size: 0.8rem; /* Smaller size */
-  color: #007bff; /* Bootstrap blue */
-  cursor: pointer; /* Pointer cursor to indicate interactivity */
-  font-weight: bold; /* Adds thickness */
-  text-shadow: 0px 0px 1px #007bff; /* Slight shadow to give a thicker appearance */
+  font-size: 0.8rem;
+  color: #007bff; 
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 0px 0px 1px #007bff;
 }
 
-/* Sidebar icon styles */
+
 #sidebar .nav-link i {
-  color: #007bff; /* Bootstrap blue */
-  font-size: 1.2rem; /* Increase icon size */
-  font-weight: bold; /* Make the icon thicker */
-  text-shadow: 0px 0px 1px #007bff; /* Add subtle shadow for thickness */
+  color: #007bff; 
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 1px #007bff; 
 }
 
 .nav-tabs .nav-link {
   border: none;
-  border-bottom: 2px solid transparent; /* Default transparent border */
+  border-bottom: 2px solid transparent; 
   color: #333;
   font-weight: 500;
 }
 
 .nav-tabs .nav-link.active {
-  border-bottom: 2px solid #000; /* Underline for the active tab */
+  border-bottom: 2px solid #000; 
   font-weight: bold;
   color: #000;
 }
 
 .notification-badge {
   display: inline-block;
-  width: 24px; /* Adjust size as needed */
+  width: 24px;
   height: 24px;
   line-height: 24px;
   text-align: center;
-  font-size: 0.9rem; /* Adjust font size as needed */
-  background-color: #e9f4ff; /* Light blue background */
-  color: #007bff; /* Text color */
-  border-radius: 50%; /* Makes the badge circular */
+  font-size: 0.9rem;
+  background-color: #e9f4ff;
+  color: #007bff;
+  border-radius: 50%; 
 }
 
 .input-container {
   display: flex;
   align-items: center;
-  background-color: #f5faff; /* Light background */
+  background-color: #f5faff;
   border-radius: 8px;
   padding: 10px;
   border: 1px solid #e0e0e0;
 }
+
 .input-container i {
-  font-size: 1rem; /* Smaller font size */
+  font-size: 1rem;
   margin-right: 10px;
-  color: #6c757d; /* Icon color */
+  color: #6c757d;
   cursor: pointer;
 }
+
 .input-field {
   border: none;
   flex-grow: 1;
@@ -428,8 +351,9 @@ margin: 0 auto 15px; /* Centers it and adds bottom margin */
   background-color: transparent;
   color: #6c757d;
 }
+
 .send-icon {
-  font-size: 1.2rem; /* Smaller send icon */
+  font-size: 1.2rem;
   color: #6c757d;
   cursor: pointer;
 }
