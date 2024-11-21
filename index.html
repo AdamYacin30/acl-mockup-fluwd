@@ -274,7 +274,11 @@ function sendMessage(predefinedMessage = '') {
             botImage.style.marginTop = "0.5rem";
 
             const responseMessageDiv = document.createElement('div');
-            responseMessageDiv.classList.add('alert', 'alert-secondary', 'text-start', 'flex-grow-1');
+            responseMessageDiv.classList.add('alert', 'text-start', 'flex-grow-1'); // Removed 'alert-secondary'
+            responseMessageDiv.style.backgroundColor = '#ffffff'; // Set background to white
+            responseMessageDiv.style.color = '#000000'; // Optional: Set text color
+            responseMessageDiv.style.border = '1px solid #dee2e6'; // Optional: Add border
+            responseMessageDiv.style.borderRadius = '0.25rem'; // Optional: Add rounded corners
             responseMessageDiv.innerHTML = `
                 <strong>Fluwd:</strong>
                 <p>To resolve issues of a delayed project schedule, consider implementing the following strategies:</p>
@@ -301,7 +305,6 @@ function sendMessage(predefinedMessage = '') {
                     </li>
                 </ol>
             `;
-
             responseMessageContainer.appendChild(botImage);
             responseMessageContainer.appendChild(responseMessageDiv);
             chatHistory.appendChild(responseMessageContainer);
@@ -314,7 +317,7 @@ function sendMessage(predefinedMessage = '') {
 
             const regenerateButton = document.createElement('button');
             regenerateButton.classList.add('btn', 'mt-3');
-            regenerateButton.style.backgroundColor = '#ffffff'; // Light gray color
+            regenerateButton.style.backgroundColor = '#ffffff'; 
             regenerateButton.style.color = '#6c757d'; // Text color (darker gray)
             regenerateButton.style.border = 'none'; // Remove border
             regenerateButton.style.padding = '10px 20px';
@@ -333,8 +336,5 @@ function sendMessage(predefinedMessage = '') {
         }, 1000); // 1000 milliseconds = 1 second
     }
 }
-
-
-
 
 </script>
