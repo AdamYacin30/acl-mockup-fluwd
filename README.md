@@ -5,6 +5,12 @@ The **ACL Mockup Fluwd** is a comprehensive web project developed using **Bootst
 
 This mockup will soon be used for an AI powered project management product that uses generative AI to create project management artifacts, such as project plans, risk assessments, and status reports, based on user inputs and project-specific data with an intuitive interface where project managers can input relevant project information to guide the generation of documents.
 
+## Demo Video
+<video width="640" height="360" controls>
+  <source src="https://github.com/user-attachments/assets/57950d01-5af0-4e1e-be3a-68ad061b455c" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ## Project Objectives
 - Develop a **responsive Bootstrap-based mockup**.
 - Follow design specifications and layout structure outlined in the provided PDF.
